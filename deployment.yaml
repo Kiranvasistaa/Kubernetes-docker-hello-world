@@ -19,7 +19,7 @@ apiVersion: app/v1
 kind: Deployement
 metadata: 
   name: web-app
-    labels: 
+  labels: 
       app: web-app
 spec: 
   replicas: 1
