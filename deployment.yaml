@@ -1,36 +1,36 @@
 apiVersion: v1
 kind: Service
 metadata: 
-  name: web-app
+  name: hello-world
   labels: 
-    app: web-app
+    app: hello-world
     
 spec:
-  type: Nodeport
+  type: Loadbalancer
   ports:
   - port: 8080
     protocol: TCP
     targetPort: 8080
   selector: 
-    app: web-app
+    app: hello-world
     
 ---
 apiVersion: app/v1
 kind: Deployement
 metadata: 
-  name: web-app
+  name: hello-world
   labels:
-    app: web-app
+    app: hello-world
   
 spec: 
   replicas: 1
   selector: 
     matchLabels:
-      app: web-app
+      app: hello-world
   template: 
     metadata:
       labels:
-        app: web-app
+        app: hello-world
     spec:
       containers: 
       - name: springboot
