@@ -12,7 +12,7 @@ spec:
   type: nodeport
   
   ---
-  apiVersion: apps/v1
+  apiVersion: app/v1
 kind: Deployment
 metadata:
   name: hello-world
@@ -26,6 +26,7 @@ spec:
       containers:
       - name: hello-world-pod
         image: Kiranvasistaa/helloworld-spring-boot:latest
+        imagePullPolicy: Always
         ports: 
         - containerPort: 8080
         
