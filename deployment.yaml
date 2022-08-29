@@ -36,5 +36,5 @@ spec:
         image: {{ .Values.image_name }}
         imagePullPolicy: Always
         ports:
-        - conatainerPort: 8080
+        - containerPort: 8080
         
