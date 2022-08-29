@@ -3,7 +3,7 @@ kind: Service
 metadata: 
   name: hello-world
   labels: 
-    app: hello-world
+    app: web-app
     
 spec:
   type: Loadbalancer
@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector: 
-    app: hello-world
+    app: web-app
     
 ---
 apiVersion: app/v1
@@ -20,17 +20,17 @@ kind: Deployement
 metadata: 
   name: hello-world
   labels:
-    app: hello-world
+    app: web-app
   
 spec: 
   replicas: 1
   selector: 
     matchLabels:
-      app: hello-world
+      app: web-app
   template: 
     metadata:
       labels:
-        app: hello-world
+        app: web-app
     spec:
       containers: 
       - name: springboot
