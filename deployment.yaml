@@ -15,7 +15,7 @@ spec:
     app: web-app
     
 ---
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: hello-world
