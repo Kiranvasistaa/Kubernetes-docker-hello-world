@@ -6,7 +6,7 @@ metadata:
     app: web-app
     
 spec:
-  type: Loadbalancer
+  type: NodePort
   ports:
   - port: 8080
     protocol: TCP
