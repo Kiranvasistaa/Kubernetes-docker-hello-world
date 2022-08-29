@@ -34,7 +34,7 @@ spec:
     spec:
       containers: 
       - name: springboot
-        image: latest
+        image: {{ .Values.image_name }} 
         imagePullPolicy: Always
         ports: 
         - conatainerPort: 8080
