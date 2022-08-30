@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: {{ .Values.image_name }}
+        image: kiranvasista/maven
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
